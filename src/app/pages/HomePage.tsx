@@ -17,7 +17,7 @@ import UniversitiesSlider from "../components/niversitiesSlider";
 import ritalImage from "../pilden/rital.png"
 import ChatBot from "../components/ChatBot";
 import WhyTrueUniv from "../components/WhyTrueUniv";
-
+import TimelineSection from "../components/TimelineSection"
 const majors = [
     {
       title: "الطب ",
@@ -71,10 +71,11 @@ export function HomePage() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       
       <HeroSection />
       <StatsSection />
+      <TimelineSection />
        
       <section className="py-3 flex justify-center bg-[#f2f9f5]">
   <div className="relative bg-[#f2f9f5] rounded-3xl shadow-xl w-[330px] max-w-sm p-4 md:p-6 flex flex-col items-center text-right">
@@ -119,70 +120,71 @@ export function HomePage() {
     </div>
   </div>
       </section>
-       <section className="py-6 flex justify-center bg-[#f2f9f5]">
-      <div className="bg-[#f2f9f5] rounded-3xl shadow-xl w-full max-w-md p-8 flex flex-col items-center text-center">
-        {/* الصورة */}
-        <img
-          src={ritalImage}
-          alt="ريتال التعليمية"
-          className="w-48 h-auto mb-6 rounded-xl"
-        />
+      <section className="py-12 bg-[#f2f9f5]">
+  <div className="container mx-auto px-4">
 
-        <h2 className="text-3xl font-bold text-[#0d2b5e] mb-4">
-          تعرف على ريتال التعليمية أكثر
-        </h2>
-        <p className="text-gray-600 mb-6">
-          اضغط على الزر التالي لزيارة صفحة "عن ريتال التعليمية" ومعرفة كل التفاصيل.
-        </p>
-        <Link
-          to="/about"
-          className="bg-[#154734] text-white px-6 py-3 rounded-full hover:bg-blue-700 transition"
+    {/* التعريف */}
+    <div className="flex flex-col items-center text-center mb-10">
+
+      <img
+        src={ritalImage}
+        alt="ريتال التعليمية"
+        className="w-12 h-auto mb-4 rounded-xl"
+      />
+
+      <h2 className="text-3xl font-bold text-[#0d2b5e] mb-4">
+        تعرف على ريتال التعليمية أكثر
+      </h2>
+
+      <p className="text-gray-600 max-w-xl">
+        اضغط على الزر التالي لزيارة صفحة "عن ريتال التعليمية" ومعرفة كل التفاصيل.
+      </p>
+
+    </div>
+
+
+    {/* الكروت */}
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-10">
+
+      {majors.map((major, index) => (
+        <a
+          key={index}
+          href={major.link || "#"}
+          className="bg-white border rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg transition"
         >
-          المزيد عن ريتال
-        </Link>
-      </div>
-    </section>
-    <section className="py-8 bg-[#f2f9f5]">
 
-      <div className="container mx-auto px-4">
+          <img
+            src={major.img}
+            alt={major.title}
+            className="w-10 h-10 object-contain mb-4"
+          />
 
-        {/* العنوان */}
-        <h2 className="text-center text-[#0d2b5e] text-3xl md:text-4xl font-bold mb-12">
-           أفضل التخصصات
-        </h2>
+          <h3 className="font-bold text-lg mb-1">
+            {major.title}
+          </h3>
 
-        {/* الكروت */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <p className="text-[#154734] font-semibold">
+            سجل الآن
+          </p>
 
-          {majors.map((major, index) => (
-            <a
-              key={index}
-              href={major.link || "#"}
-              className="bg-[#f2f9f5] border rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg transition"
-            >
+        </a>
+      ))}
 
-              <img
-                src={major.img}
-                alt={major.title}
-                className="w-10 h-10 object-contain mb-4 text-[#0d2b5e]"
-              />
+    </div>
 
-              <h3 className="font-bold text-lg mb-1">
-                {major.title}
-              </h3>
 
-              <p className="text-green-600 font-semibold">
-                سجل الآن
-              </p>
+    {/* الزر تحت */}
+    <div className="flex justify-center">
+      <Link
+        to="/about"
+        className="bg-[#154734] text-white px-8 py-3 rounded-full hover:bg-[#0d2b5e] transition"
+      >
+        المزيد عن ريتال
+      </Link>
+    </div>
 
-            </a>
-          ))}
-
-        </div>
-
-      </div>
-
-    </section>
+  </div>
+</section>
       <WhyTrueUniv />
       {/* Slider الجامعات */}
       <UniversitiesSlider />
@@ -190,7 +192,7 @@ export function HomePage() {
 
       {/* سكشن About مختصر مع زر يفتح AboutPage */}
      
-      <AboutSection />
+      {/* <AboutSection /> */}
    
       {/* قسم الخدمات */}
       

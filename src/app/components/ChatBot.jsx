@@ -14,7 +14,7 @@ export default function ChatBot() {
           position: "fixed",
           bottom: "20px",
           right: "10px",
-          background: "#22275f",
+          background: "#0d2b5e",
           color: "white",
           width: "60px",
           height: "60px",

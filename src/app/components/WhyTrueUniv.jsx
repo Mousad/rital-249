@@ -28,7 +28,7 @@ export default function WhyTrueUniv() {
        
 
         {/* الصورة */}
-        <div className="flex flex-col items-center mt-12 relative">
+        <div className="flex flex-col items-center  relative">
         {/* الصورة */}
          <img
            src="https://trueuniv.com/wp-content/uploads/2025/05/about-thumb-2.png"

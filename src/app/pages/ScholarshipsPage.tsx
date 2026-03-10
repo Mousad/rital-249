@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Footer } from "../components/Footer";
-
+import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -46,6 +46,25 @@ const majors = [
   },
 ];
 
+  const steps = [
+    {
+      img: "https://d2w7l1p59qkl0r.cloudfront.net/static/images/newb4s-steps.gif",
+      title: "التسجيل وإنشاء حساب",
+      desc: "قم بإنشاء حسابك بسهولة وابدأ رحلتك التعليمية معنا للحصول على أفضل الفرص الدراسية.",
+    },
+    {
+      img: "https://d2w7l1p59qkl0r.cloudfront.net/static/images/newb4s-steps2.gif",
+      title: "البحث عن المنح",
+      desc: "تصفح مجموعة كبيرة من المنح الدراسية واختر ما يناسب تخصصك واهتماماتك.",
+    },
+    {
+      img: "https://d2w7l1p59qkl0r.cloudfront.net/static/images/newb4s-steps3.gif",
+      title: "التقديم على المنحة",
+      desc: "قم بتجهيز أوراقك وتقديم طلبك للمنحة التي تناسبك بكل سهولة.",
+    },
+  ];
+
+
 const requirements = [
   { title: "الاسم رباعي" },
   { title: "اسم المدرسة" },
@@ -60,14 +79,15 @@ const requirements = [
 const faqs = [
   { question: "كيف يمكنني بدء التقديم", answer: "يمكنك البدء بتسجيل حساب على منصة ريتال واتباع خطوات التقديم الخاصة بالمنحة التي ترغب بها." },
   { question: "كم تستغرق عملية المعادلة؟", answer: "عادة تستغرق عملية المعادلة من أسبوعين إلى أربعة أسابيع حسب نوع الشهادة والجامعة." },
-  { question: "هل تقدمون مساعدة في  على منح", answer: "نعم، نقدم استشارات كاملة ومتابعة للمنح الدراسية لتسهيل عملية التقديم على الطلاب." },
-  { question: "ما هي رسوم الخدمات التي تقدمونها؟", answer: "الرسوم تختلف حسب نوع الخدمة، ويمكنك التواصل مع فريقنا لمعرفة التفاصيل الدقيقة." }
+  { question: "هل بنقدم مساعدة لي   منح", answer: "نعم، نقدم استشارات كاملة ومتابعة للمنح الدراسية لتسهيل عملية التقديم على الطلاب." },
+  { question: "ما هي رسوم الخدمات  ", answer: "الرسوم تختلف حسب نوع الخدمة، ويمكنك التواصل مع فريقنا لمعرفة التفاصيل الدقيقة." }
 ];
 
 export function ScholarshipsPage() {
 
   const images = [
-    "https://i.pinimg.com/736x/40/53/56/4053568214a77cb11b36191712095b81.jpg"
+    "https://i.pinimg.com/736x/40/53/56/4053568214a77cb11b36191712095b81.jpg",
+    "https://www.sabanciuniv.edu/sites/default/files/inline-images/footer2-1.png"
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -92,7 +112,7 @@ export function ScholarshipsPage() {
 
         {/* الهيدر */}
         <div
-          className="w-full h-70 md:h-96 bg-cover py-20 bg-center relative flex items-center justify-center"
+          className="w-full h-90 md:h-96 bg-cover py-20 bg-center relative flex items-center justify-center"
           style={{ backgroundImage: `url(${images[currentImage]})` }}
         >
           <div className="absolute inset-0 bg-black/30"></div>
@@ -132,6 +152,7 @@ export function ScholarshipsPage() {
 
           </div>
         </section>
+        
 
         <section className="bg-[#f2f9f5] py-6">
   <div className="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
@@ -156,7 +177,7 @@ export function ScholarshipsPage() {
         <li className="flex gap-2 text-gray-700">
                     <span className="text-[#154734] text-lg">←</span>
 
-          <span>استشارات تعليمية شاملة لاختيار التخصص والجامعة</span>
+          <span>استشارات تعليمية شاملة لاختيار التخصص </span>
         </li>
 
         <li className="flex  justify gap-2 text-gray-700">
@@ -193,13 +214,67 @@ export function ScholarshipsPage() {
     </div>
 
   </div>
-</section>
+      </section>
+   <section className="bg-[#f2f9f5] py-16 relative">
+      <div className="container mx-auto px-4 text-center">
+
+        {/* العنوان */}
+        <h2 className="text-3xl md:text-4xl font-bold text-[#0d2b5e] mb-8">
+          خطوات الحصول على <span className="uppercase font-extrabold">منحة دراسية</span>
+        </h2>
+
+        {/* الخط */}
+        <div className="flex justify-center mb-10">
+          <img
+            src="https://d2w7l1p59qkl0r.cloudfront.net/static/images/newb4sstepsbgline.png"
+            alt="line"
+            className="max-w-full"
+          />
+        </div>
+
+        {/* الخطوات */}
+        <div className="grid md:grid-cols-3 gap-10">
+
+          {steps.map((step, index) => (
+            <div key={index} className="text-center">
+
+              <img
+                src={step.img}
+                alt={step.title}
+                className="w-20 h-20 mx-auto mb-4"
+              />
+
+              <h3 className="text-lg font-bold text-[#0d2b5e] mb-2">
+                {step.title}
+              </h3>
+
+              <p className="text-gray-600 text-sm text-start md:text-center">
+                {step.desc}
+              </p>
+
+            </div>
+          ))}
+
+        </div>
+
+        {/* الزر */}
+        <div className="flex justify-end mt-10">
+          <a
+            href="/register"
+            className="bg-[#154734] text-white px-6 py-3 rounded-full hover:bg-[#0d2b5e] transition"
+          >
+            سجل الآن
+          </a>
+        </div>
+
+      </div>
+    </section>
 
         {/* الفورم */}
-        <section className="bg-[#f2f9f5] py-16">
+        <section className="bg-[#f2f9f5] py-6">
           <div className="container mx-auto px-4 flex justify-center">
 
-            <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-xl">
+            <div className="bg-[#f2f9f5 shadow-xl rounded-2xl p-8 w-full max-w-xl">
 
               <h2 className="text-2xl font-bold text-center text-[#154734] mb-6">
                 سجل الآن مع Rital
@@ -222,9 +297,10 @@ export function ScholarshipsPage() {
                 <div className="flex flex-col sm:flex-row gap-2">
 
                   <select className="border border-gray-300 rounded-lg p-3">
-                    <option>🇸🇦 +966</option>
                     <option>🇪🇬 +20</option>
-                    <option>🇦🇪 +971</option>
+                    <option>🇸🇦 +966</option>
+                    
+                    <option>🇦🇪 +249</option>
                   </select>
 
                   <input
@@ -283,20 +359,20 @@ export function ScholarshipsPage() {
                 <a
                   key={index}
                   href={major.link || "#"}
-                  className="bg-white border rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg"
+                  className="bg-[#f2f9f5 border rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg"
                 >
 
                   <img
                     src={major.img}
                     alt={major.title}
-                    className="w-20 h-20 object-contain mb-4"
+                    className="w-10 h-10 object-contain mb-4"
                   />
 
-                  <h3 className="font-bold text-lg mb-1">
+                  <h3 className="font-bold text- mb-1">
                     {major.title}
                   </h3>
 
-                  <p className="text-green-600 font-semibold">
+                  <p className="text-green-600 font-">
                     سجل الآن
                   </p>
 
@@ -310,7 +386,7 @@ export function ScholarshipsPage() {
         </section>
 
         {/* FAQ */}
-        <section className="py-20 bg-[#f2f9f5]">
+        <section className="py-8 bg-[#f2f9f5]">
 
           <div className="container mx-auto px-4">
 
@@ -324,13 +400,19 @@ export function ScholarshipsPage() {
                 <div key={idx} className="bg-white p-6 rounded-xl">
 
                   <button
-                    onClick={() => toggleFAQ(idx)}
-                    className="w-full flex justify-between"
-                  >
-                    <h3 className="font-bold text-[#154734]">
-                      {faq.question}
-                    </h3>
-                  </button>
+  onClick={() => toggleFAQ(idx)}
+  className="w-full flex justify-between items-center"
+>
+  <h3 className="font-bold text-[#154734]">
+    {faq.question}
+  </h3>
+
+  <ChevronDown
+    className={`transition-transform duration-300 ${
+      openFAQ === idx ? "rotate-180" : ""
+    }`}
+  />
+</button>
 
                   {openFAQ === idx && (
                     <p className="mt-4 text-gray-700">
@@ -352,7 +434,7 @@ export function ScholarshipsPage() {
           href="https://wa.me/+201002337674"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 bg-green-500 text-white px-4 py-5 rounded-full shadow-lg flex items-center justify-center"
+          className="fixed bottom-6 right-6 z-10 bg-green-500 text-white px-4 py-4 rounded-full shadow-lg flex items-center justify-center"
         >
           <FontAwesomeIcon icon={faWhatsapp} />
         </a>
