@@ -18,6 +18,8 @@ import ritalImage from "../pilden/rital.png"
 import ChatBot from "../components/ChatBot";
 import WhyTrueUniv from "../components/WhyTrueUniv";
 import TimelineSection from "../components/TimelineSection"
+import EgyptMap from "../components/EgyptMap";
+
 const majors = [
     {
       title: "الطب ",
@@ -76,7 +78,7 @@ export function HomePage() {
       <HeroSection />
       <StatsSection />
       {/* <TimelineSection /> */}
-       
+      
       <section className="py-3 flex justify-center bg-[#f2f9f5]">
   <div className="relative bg-[#f2f9f5] rounded-3xl shadow-xl w-[330px] max-w-sm p-4 md:p-6 flex flex-col items-center text-right">
 
@@ -214,7 +216,7 @@ export function HomePage() {
       {/* Slider الجامعات */}
       <UniversitiesSlider />
       <ChatBot />
-
+      <EgyptMap />
       {/* سكشن About مختصر مع زر يفتح AboutPage */}
      
       {/* <AboutSection /> */}
