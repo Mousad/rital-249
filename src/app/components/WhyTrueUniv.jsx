@@ -20,7 +20,7 @@ export default function WhyTrueUniv() {
   }, []);
 
   return (
-    <section className="py-2 bg-[#f2f9f5] overflow-hidden">
+    <section className="py-0 bg-[#f2f9f5] overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
 
         
@@ -28,10 +28,14 @@ export default function WhyTrueUniv() {
        
 
         {/* الصورة */}
+        <Link
+            to="/about"
+            className=""
+          >
         <div className="flex flex-col items-center  relative">
         {/* الصورة */}
          <img
-           src="https://trueuniv.com/wp-content/uploads/2025/05/about-thumb-2.png"
+           src="/src/app/pilden/bvak.png"
           className="w-72 rounded-xl shadow-lg"
           />
 
@@ -45,23 +49,15 @@ export default function WhyTrueUniv() {
            </p>
            </div>
             </div>
-  <div className="flex justify-start gap-4 mt-8">
+ 
 
-          <Link
-            to="/about"
-            className="bg-[#154734] text-white px-6 py-3 rounded-full"
-          >
-            اقرأ المزيد
+          
+            
           </Link>
 
-          <a
-            href="#contact"
-            className="border border-[#154734] text-[#154734] px-6 py-3 rounded-full"
-          >
-            تواصل معنا
-          </a>
+         
 
-        </div>
+       
       </div>
     </section>
   );

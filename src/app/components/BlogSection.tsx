@@ -45,19 +45,14 @@ export function BlogSection() {
   return (
     <section
       id="blog"
-      className="py-20 px-4"
+      className="py-7 px-4"
       style={{ backgroundColor: "#f2f9f5" }}
     >
       <div className="max-w-4xl mx-auto">
 
         {/* Header */}
         <div className="mb-10 text-center">
-          <span
-            className="inline-block px-5 py-2 rounded-full text-sm font-bold mb-3"
-            style={{ backgroundColor: "#0d2b5e15", color: "#0d2b5e" }}
-          >
-            أخبار الجامعات
-          </span>
+          
 
           <h2 className="text-4xl font-black text-gray-900">
             أحدث خبر عن الجامعات

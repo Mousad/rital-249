@@ -1,25 +1,26 @@
 import { useState, useEffect } from "react";
 import { GraduationCap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import backImage from "/src/app/pilden/baks.jfif";
+import bsnkImage from "/src/app/pilden/bsnk.jpg";
+import akibImage from "/src/app/pilden/akib.jfif";
+// import buackImage from "/src/app/pilden/buack.jpg";
 
 const heroSlides = [
   {
-    image:
-      "https://images.unsplash.com/photo-1714558711114-04eb6d6749b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwaW50ZXJuYXRpb25hbCUyMHN0dWRlbnRzJTIwdW5pdmVyc2l0eSUyMGNhbXB1cyUyMHNtaWxpbmd8ZW58MXx8fHwxNzcyMzkxODAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/src/app/pilden/baks.jfif",
     headline: "ابدأ رحلتك التعليمية بثقة مع ريتال",
     subheadline:
       "منصة ريتال ترشدك خطوة بخطوة لاختيار أفضل المنح الدراسية والجامعات حول العالم، لتضمن مستقبلاً تعليمياً مشرقاً مليئاً بالفرص.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1763469029610-a3e8e4536c6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcm5hdGlvbmFsJTIwc3R1ZGVudHMlMjBvdXRkb29yJTIwY2FtcHVzJTIwc21pbGluZyUyMGdyb3VwfGVufDF8fHx8MTc3MjM5MTgyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/src/app/pilden/bsnk.jpg",
     headline: "انضم لمجتمع ريتال من الطلاب الناجحين",
     subheadline:
       "أكثر من 5000 طالب حققوا أهدافهم التعليمية بمساعدة ريتال، لتكون أنت التالي الذي يحقق أحلامه بثقة وسهولة.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1664273891579-22f28332f3c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB1bml2ZXJzaXR5JTIwY2FtcHVzJTIwYnVpbGRpbmclMjBhcmNoaXRlY3R1cmV8ZW58MXx8fHwxNzcyMzkxODA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/src/app/pilden/akib.png",
     headline: "أفضل الجامعات العالمية في متناول يديك",
     subheadline:
       "اكتشف برامج دراسية معتمدة دولياً عبر ريتال، بتكاليف مناسبة ودعم كامل لتجربة تعليمية سلسة وموثوقة.",
@@ -45,24 +46,26 @@ function SearchCard() {
     if (degree === "scholarship") navigate("/scholarships");
     if (degree === "certificate") navigate("/certificateservices");
     if (degree === "consultation") navigate("/consultation");
+    
   };
 
   return (
     <div className="w-full flex justify-center px-4">
-      <div className="bg-black/50 backdrop-blur-md rounded-3xl shadow-lg p-9 w-full max-w-md text-white flex flex-col gap-6">
+      <div className="bg-black/50 backdrop-blur-md rounded-3xl shadow-lg p-6 w-full max-w-md text-white flex flex-col gap-6">
         <h2 className="text-center text-2xl md:text-3xl font-bold">حقق حلمك الآن</h2>
-
+         
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3 bg-black/30 rounded-xl px-4 py-2 cursor-pointer hover:bg-black/40">
             <GraduationCap size={20} />
             <select
-              className="bg-transparent w-full text-sm py-1 h-20 outline-none text-white"
+              className="bg-{#f2f9f5} w-full text-sm py-1 h-14 outline-none text-white"
               value={degree}
               onChange={handleChange}
             >
-              <option value="" className="text-[#1c398e]">اختر الخدمة</option>
-              <option value="scholarship" className="text-[#1c398e]">تقديم منح</option>
+              {/* <option value="" className="text-[#1c398e]">اختر الخدمة</option> */}
+              <option value="scholarship" className="text-[#1c398e]">اﻟﻤﻨﺢ اﻟﺪوﻟﻴﺔ</option>
               <option value="certificate" className="text-[#1c398e]">استخراج شهادات</option>
+              <option value="courses" className="text-[#1c398e]">دورات تعليمية</option>
               <option value="consultation" className="text-[#1c398e]">استشارات</option>
             </select>
           </div>
@@ -106,13 +109,15 @@ export function HeroSection() {
   return (
     <section id="home" className="relative h-screen min-h-[700px] overflow-hidden">
       {/* Background Image */}
+      
       <div
         className={`absolute inset-0 transition-opacity duration-500 ${
           isAnimating ? "opacity-60" : "opacity-100"
         }`}
         style={{
           backgroundImage: `url(${slide.image})`,
-          backgroundSize: "cover",
+          backgroundSize: "800px",
+         
           backgroundPosition: "center",
         }}
       />

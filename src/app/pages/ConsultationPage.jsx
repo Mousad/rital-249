@@ -253,7 +253,9 @@ export default function CoursesPage() {
       </div>
     </div>
   </div>
+  
 </div>
+
 {/* ======= زر واتساب عائم ======= */}
         <a
           href="https://wa.me/201000000000"

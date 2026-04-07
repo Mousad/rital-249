@@ -4,6 +4,10 @@ import { ArrowRight } from "lucide-react";
 import { TeamSection } from "../components/TeamSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import EgyptMap from "../components/EgyptMap";
+
+import buack from "/src/app/pilden/buack.jpg";
+import documVideo from "/src/app/pilden/docum.mp4";
 
 export default function AboutPage() {
   return (
@@ -22,11 +26,13 @@ export default function AboutPage() {
       {/* ===== Hero Section ===== */}
       <header
         className="relative bg-cover bg-center overlay-medium text-white"
-        style={{
-          backgroundImage:
-            "url('https://www.harvard.edu/wp-content/uploads/2023/11/110823_Features_KS_713-scaled.jpg?w=2000')",
-          height: "500px", // يمكنك تعديل الطول حسب الحاجة
-        }}
+       style={{
+  backgroundImage: `url(${buack})`,
+  height: "500px",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+}}
+
         aria-label="About Hero"
       >
         <div className="absolute inset-0 bg-black/40"></div>
@@ -49,11 +55,11 @@ export default function AboutPage() {
 
     {/* ===== الشطر الصوري + Counter ===== */}
     <div className="md:w-1/2 flex flex-col items-center space-y-6">
-      <img
+      {/* <img
         src="https://rital-sd.com/lovable-uploads/a5c80a15-6935-45ec-8852-551e961cc11f.png"
         alt="الدراسة في الخارج"
         className="rounded-3xl shadow-lg w-full max-w-md object-cover"
-      />
+      /> */}
 
       {/* Counter */}
       <div className="flex justify-center">
@@ -63,7 +69,7 @@ export default function AboutPage() {
         عدد الطلاب المسجلين من خلالنا على الجامعات
       </div>
       <div className="text-4xl font-bold text-[#f2f9f5]">
-        1,432+
+          15,000 
       </div>
     </div>
   </div>
@@ -78,7 +84,7 @@ export default function AboutPage() {
     {/* الصورة */}
     <div className="flex justify-center md:justify-start">
       <img
-        src="https://timseducation.com/wp-content/uploads/2025/11/CISCO-CERTIFICATIONS.webp"
+        src="/src/app/pilden/bsnk.jpg"
         alt="طلاب يركزون على التعلم عبر الإنترنت"
         className="rounded-xl shadow-lg w-full max-w-md object-cover"
       />
@@ -134,7 +140,9 @@ export default function AboutPage() {
     </div>
 
   </div>
-</section>
+      </section>
+            <EgyptMap />
+      
 <section className="py-16 bg-white relative">
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h2 className="text-3xl font-bold text-[#154734] mb-4">أرقامنا العالمية</h2>
@@ -178,11 +186,15 @@ export default function AboutPage() {
 
     {/* ===== الشطر الصوري + Counter ===== */}
     <div className="md:w-1/2 flex flex-col items-center space-y-6">
-      <img
-        src="https://trueuniv.com/wp-content/uploads/2025/03/الدراسة-في-تركيا-1024x1024.webp"
-        alt="الدراسة في الخارج"
-        className="rounded-3xl shadow-lg w-full max-w-md object-cover"
-      />
+      <video
+  src={documVideo}
+  className="rounded-3xl shadow-lg w-full max-w-md h-[500px] object-cover"
+  autoPlay
+  loop
+  muted
+  playsInline
+/>
+
 
       {/* Counter */}
       <div className="flex justify-center">

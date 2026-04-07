@@ -4,6 +4,7 @@ import { ArrowRight, Plus, X } from "lucide-react";
 import { useState } from "react";
 
 
+
 const services = [
   // الخدمات الأساسية (للبطاقات التفاعلية)
   { id: 1, title: "المنح", textColor: "text-[#154734]", link: "/services/scholarships" },
@@ -36,23 +37,23 @@ export function ServicesPage() {
 
       {/* ===== Hero Section ===== */}
       
-       <div className="relative w-full h-[420px]">
-  <img
-    src="https://trueuniv.com/wp-content/uploads/2025/05/banner.jpg"
-    alt="bg-about"
-    className=""
-  />
+    <div className="relative h-80 w-full">
+        <img
+          src="	https://rital-sd.com/lovable-uploads/a5c80a15-6935-45ec-8852-551e961cc11f.png"
+          alt="certificate"
+          className="w-full h-full object-cover"
+        />
 
-  {/* طبقة الظل */}
-  <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
 
-  {/* النص فوق الصورة */}
-  <div className="relative z-10 flex items-center justify-center h-full text-center">
-    <h1 className="text-white text-4xl md:text-5xl font-bold">
-      خدمات ريتال التعليمية
-    </h1>
-  </div>
-</div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+          <h1 className="text-3xl md:text-2xl font-bold mb-4">
+             خدمات ريتال التعليمية
+          </h1>
+
+         
+        </div>
+      </div>
 
      
 
@@ -74,7 +75,7 @@ export function ServicesPage() {
       </section>
 
        {/* ===== Main Services Section ===== */}
-      <section className="py-10 bg-[#ffffff]">
+      {/* <section className="py-10 bg-[#f2f9f5]">
         <div className="text-center mb-14">
           <h2 className="text-4xl font-bold text-[#154734]">
             الخدمات الرئيسية
@@ -91,10 +92,10 @@ export function ServicesPage() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* ===== Student Services Section ===== */}
-      <section className="py-8 bg-[#f2f9f5]">
+      {/* <section className="py-8 bg-[#f2f9f5]">
         <div className="text-center mb-14">
           <h2 className="text-4xl font-bold text-[#154734]">الخدمات الطلابية</h2>
         </div>
@@ -114,10 +115,91 @@ export function ServicesPage() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
+      <section className="py-20 relative">
+  <div className="container mx-auto px-4">
+    <div className="space-y-24">
+
+      {/* الدراسة بالخارج */}
+      <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
+
+        {/* الايقونة */}
+        <div className="w-full md:w-1/3 flex justify-center">
+          <div className="w-64 h-64 rounded-3xl flex items-center justify-center backdrop-blur-sm border border-[#154734]/10 relative overflow-hidden group hover:scale-105 transition-all duration-500">
+
+            <div className="absolute inset-0 opacity-20 bg-[#feeaeb]"></div>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-20 h-20 text-[#154734] relative z-10 group-hover:scale-110 transition-transform duration-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M12 7v14" />
+              <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+            </svg>
+
+          </div>
+        </div>
+
+        {/* النص */}
+        <div className="w-full md:w-2/3 space-y-6">
+
+          <div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#154734] mb-4">
+              الدراسة بالخارج
+            </h2>
+
+            <p className="text-lg text-gray-600 leading-relaxed">
+              نوفر فرص الدراسة في أفضل الجامعات العالمية مع خدمات متكاملة تشمل:
+            </p>
+          </div>
+
+          {/* الخدمات */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div className="flex items-start gap-3 p-3 rounded-xl bg-white border hover:border-[#154734]/20 transition">
+              <div className="w-2 h-2 rounded-full bg-[#1f4385] mt-2"></div>
+              <span>استشارات اختيار الجامعة والتخصص المناسب</span>
+            </div>
+
+            <div className="flex items-start gap-3 p-3 rounded-xl bg-white border hover:border-[#154734]/20 transition">
+              <div className="w-2 h-2 rounded-full bg-[#1f4385] mt-2"></div>
+              <span>إعداد وتجهيز ملفات التقديم</span>
+            </div>
+
+            <div className="flex items-start gap-3 p-3 rounded-xl bg-white border hover:border-[#154734]/20 transition">
+              <div className="w-2 h-2 rounded-full bg-[#1f4385] mt-2"></div>
+              <span>المساعدة في كتابة السيرة الذاتية وخطابات التوصية</span>
+            </div>
+
+            <div className="flex items-start gap-3 p-3 rounded-xl bg-white border hover:border-[#154734]/20 transition">
+              <div className="w-2 h-2 rounded-full bg-[#1f4385] mt-2"></div>
+              <span>التحضير لاختبارات اللغة والقبول</span>
+            </div>
+
+          </div>
+
+          {/* زر */}
+          <Link
+  to="/study-abroad"
+  className="inline-flex items-center gap-2 bg-[#154734]/10 text-[#154734] px-8 py-4 rounded-xl font-medium hover:bg-[#154734]/20 transition"
+>
+  اكتشف المزيد
+</Link>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* ===== General Services Section ===== */}
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto bg-[#f2f9f5] px-4 py-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.filter(s => s.id >= 5 && s.id <= 6).map((service) => (
             <div key={service.id} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">

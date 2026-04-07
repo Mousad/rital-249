@@ -18,7 +18,12 @@ import ritalImage from "../pilden/rital.png"
 import ChatBot from "../components/ChatBot";
 import WhyTrueUniv from "../components/WhyTrueUniv";
 import TimelineSection from "../components/TimelineSection"
-import EgyptMap from "../components/EgyptMap";
+
+import oom from "../pilden/oom.png";
+import akib from "../pilden/akib.png";
+
+
+
 
 const majors = [
     {
@@ -30,12 +35,6 @@ const majors = [
       title: "الهندسة",
       img: "https://studyinegypt-alkayan.com/wp-content/uploads/2025/05/الهندسة.png.webp",
     },
-   
-    {
-      title: " السيبراني",
-      img: "https://studyinegypt-alkayan.com/wp-content/uploads/2025/05/الامن-السيبراني.png.webp",
-    },
-   
     {
       title: "القانون",
       img: "https://studyinegypt-alkayan.com/wp-content/uploads/2025/05/القانون.png.webp",
@@ -46,21 +45,14 @@ const majors = [
       img: "https://studyinegypt-alkayan.com/wp-content/uploads/2025/05/ادراة-الاعمال.png.webp",
       link: "https://studyinegypt-alkayan.com/%d8%af%d8%b1%d8%a7%d8%b3%d8%a9-%d8%a5%d8%af%d8%a7%d8%b1%d8%a9-%d8%a7%d9%84%d8%a3%d8%b9%d9%85%d8%a7%d9%84-%d9%81%d9%8a-%d9%85%d8%b5%d8%b1/",
     },
-  
-   
-  
-   
-    {
-      title: "Ai",
-      img: "https://studyinegypt-alkayan.com/wp-content/uploads/2025/05/الذكاء-الاصطناعي.png.webp",
-    },
   ];
 // خدمات
 const services = [
   { title: "التقديم على المنح الدراسية", slug: "scholarships" },
-  { title: "التسجيل في الكورسات", slug: "Courses" },
-  { title: "استخراج وتجهيز الشهادات", slug: "CertificateServices" },
+  { title: "استخراج تجهيز الشهادات", slug: "CertificateServices" },
   { title: "الاستشارات التعليمية", slug: "Consultation" },
+  { title: "دورات تعليمية ", slug: "Courses" },
+
 ];
 
 export function HomePage() {
@@ -79,19 +71,20 @@ export function HomePage() {
       <StatsSection />
       {/* <TimelineSection /> */}
       
-      <section className="py-3 flex justify-center bg-[#f2f9f5]">
+      <section className="py-13 flex justify-center bg-[#f2f9f5]">
   <div className="relative bg-[#f2f9f5] rounded-3xl shadow-xl w-[330px] max-w-sm p-4 md:p-6 flex flex-col items-center text-right">
 
     {/* البوردر */}
-    <div className="absolute top-0 left-0 w-full h-full border-2 border-[#154734] rounded-3xl pointer-events-none"></div>
+    <div className="absolute top-0 left-0 w-full h-full border-2 border-[#2f3b69] rounded-3xl pointer-events-none"></div>
 
     {/* الصورة */}
-    <div className="relative -mt-16 z-20">
-      <img
-        src="https://unitededucation.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsmiling-student.49aad619.png&w=828&q=60"
-        alt="student"
-        className="w-30 h-25 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-lg"
-      />
+    <div className="relative -mt-18 z-20">
+     <img
+  src={oom}
+  alt="student"
+  className="w-30 h-30 md:w-40 md:h-40 rounded-full object-cover border-2 border-[#2f3b69] shadow-lg"
+/>
+
     </div>
 
     {/* العنوان */}
@@ -121,17 +114,17 @@ export function HomePage() {
     </div>
 
     {/* زر المزيد */}
-    <div className="mt-10 z-10">
+    <div className="mt-6 z-10">
   <Link
-    to="/services"
-    className="relative group overflow-hidden px-7 py-2 rounded-full border border-[#154734] text-[#154734] font-medium"
+    to="/about"
+    className="relative group overflow-hidden px-8 z-100 bg-[#154734] text-white  -bottom-7  rounded-full border border-[#154734] text-[#154734] font-"
   >
     
     {/* الخلفية المتحركة من تحت */}
-    <span className="absolute inset-0 bg-[#154734] scale-y-0 origin-bottom rounded-full border transition-transform duration-500 group-hover:scale-y-100"></span>
+    <span className="absolute inset-0 bg-[#154734]  origin-bottom rounded-full  transition-transform duration-500 "></span>
 
     {/* النص */}
-    <span className="relative z-10 group-hover:text-white transition">
+    <span className="relative z-100">
       المزيد
     </span>
 
@@ -139,9 +132,87 @@ export function HomePage() {
 </div>
 
   </div>
-</section>
+       </section>
+        <section className="py-6 flex justify-center bg-[#f2f9f5]">
+  <div className="relative w-[330px] h-[220px] rounded-3xl overflow-hidden shadow-xl">
 
-      <section className="py-12 bg-[#f2f9f5]">
+    {/* الصورة */}
+    <img
+      src="https://i.pinimg.com/736x/58/cb/bb/58cbbb978738541186bd85e374ece2fb.jpg"
+      alt="الدراسة في الصين"
+      className="w-full h-full object-cover"
+    />
+
+    {/* طبقة تغميق */}
+    <div className="absolute inset-0 bg-black/40"></div>
+
+    {/* النص في وسط الصورة */}
+    <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+
+      <h2 className="text-3xl font-bold text-white mb-3">
+        الدراسة في الصين
+      </h2>
+
+      <p className="text-sm text-gray-200 mb-6">
+        منصة ريتال تساعدك على اختيار أفضل الجامعات والمنح الدراسية في الصين
+        لتضمن مستقبلاً تعليمياً مشرقاً.
+      </p>
+
+      {/* الزر */}
+      <Link
+        to="/study-china"
+        className="bg-[#154734] hover:bg-[#0f3a2a] text-white px-6 py-2 rounded-full transition"
+      >
+        قدم
+      </Link>
+
+    </div>
+
+  </div>
+       </section>
+      <UniversitiesSlider />
+      
+
+      <section className="py-10 flex justify-center bg-[#f2f9f5]">
+  <div className="relative bg-[#f2f9f5] rounded-3xl shadow-xl w-[330px] max-w-sm p-4 md:p-6 flex flex-col md:flex-col items-center text-right">
+
+    {/* البوردر */}
+    <div className="absolute top-0 left-0 w-full h-full border-2 border-[#2f3b69] rounded-3xl pointer-events-none"></div>
+
+    {/* الصورة + النص في صف واحد على الموبايل */}
+    <div className="flex flex-row items-center gap-4 mb-1 md:flex-col md:items-center">
+      {/* الصورة */}
+      <img
+        src={akib} // استبدل بالصورة عندك 
+        alt="الدراسة في مصر"
+        className="w-30 h-52 md:w-40 md:h-45 rounded-full object-cover border-4 border-white shadow-lg"
+      />
+
+      {/* النص */}
+      <div className="flex-1 text-right">
+        <h2 className="text-lg md:text-2xl font-bold text-[#0d2b5e]">
+          الدراسة في مصر
+        </h2>
+        <p className="text-sm md:text-base text-gray-700 mt-1 ">
+          منصة ريتال تساعدك على اختيار أفضل الجامعات والمنح الدراسية في مصر، لتضمن مستقبلاً تعليمياً مشرقاً.
+        </p>
+        <div className="-mt-1 py-3 md:mt-1  z-10 ">
+      <Link
+        to="/study-egypt"
+        className="relative group top-6 z-10 bg-[#154734] overflow-hidden px-8  rounded-full   text-[#f2f9f5] font-medium"
+      >
+        <span className="absolute inset-0  z-10  origin-bottom rounded-full  transition-transform "></span>
+        <span className="relative z-10 group-hover:text-white right-14 transition">
+          اكتشف
+        </span>
+      </Link>
+    </div>
+      </div>
+    </div>
+  </div>
+      </section>
+      
+       <section className="py-10 bg-[#f2f9f5]">
   <div className="container mx-auto px-4">
 
     {/* التعريف */}
@@ -154,7 +225,7 @@ export function HomePage() {
       />
 
       <h2 className="text-3xl font-bold text-[#0d2b5e] mb-4">
-        تعرف على ريتال التعليمية أكثر
+        تعرف على ريتال التعليمية 
       </h2>
 
       <p className="text-gray-600 max-w-xl">
@@ -194,86 +265,44 @@ export function HomePage() {
 
 
     {/* الزر تحت */}
-    <div className="flex justify-center">
-      <Link
-        to="/about"
-        className="relative group overflow-hidden px-8 py-3 rounded-full border border-[#154734] text-[#154734] font-semibold"
-      >
-
-        {/* الخلفية من اليمين */}
-        <span className="absolute inset-0 bg-[#154734] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
-
-        <span className="relative z-10 group-hover:text-white transition">
-          المزيد عن ريتال
-        </span>
-
-      </Link>
-    </div>
+   
 
   </div>
-</section>
+       </section>
       <WhyTrueUniv />
-      {/* Slider الجامعات */}
-      <UniversitiesSlider />
+      
       <ChatBot />
-      <EgyptMap />
-      {/* سكشن About مختصر مع زر يفتح AboutPage */}
-     
       {/* <AboutSection /> */}
    
-      {/* قسم الخدمات */}
-      
-      <section className="container mx-auto px-4 py-16 bg-[#f2f9f5]">
-  <div className="bg-[#0d2b5e] rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <ConsultationCTA />
+      {/* <TeamSection /> */}
+      {/* <TestimonialsSection /> */}
+    
+      <ContactSection />
+     {/* ======= سكشن موقعنا ======= */}
+<section className="container mx-auto px-4 py-12">
+  {/* العنوان */}
+  <div className="text-center mb-6">
+    <h2 className="text-3xl font-bold text-[#154734]">موقعنا</h2>
+    <p className="text-gray-600 mt-2">
+      زورنا أو تواصل معنا بسهولة من خلال موقعنا على الخريطة
+    </p>
+  </div>
 
-    {/* الأيقونة + النص */}
-    <div className="flex items-center gap-4 text-white">
-      <img
-        src="https://trueuniv.com/wp-content/uploads/2025/05/svgviewer-png-output.png"
-        alt="icon"
-        className="w-12 h-12"
-      />
-
-      <div>
-        <h3 className="text-xl font-bold">دعنا نساعدك</h3>
-        <p className="text-gray-200">
-          ابحث عن جامعتك وتخصصك المناسب لك
-        </p>
-      </div>
-    </div>
-
-    {/* زر التواصل */}
-    <a
-      href="https://api.whatsapp.com/send/?phone=905315016019"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="relative group overflow-hidden px-6 py-3 rounded-full font-semibold border border-[#f2f9f5] text-[#154734] bg-[#f2f9f5]"
-    >
-
-      {/* الخلفية المتحركة من اليمين */}
-      <span className="absolute inset-0 bg-[#154734] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
-
-      {/* النص */}
-      <span className="relative z-10 group-hover:text-white transition">
-        تواصل معنا
-      </span>
-
-    </a>
-
+  {/* الخريطة */}
+  <div className="w-full h-[260px] rounded-2xl overflow-hidden shadow-lg">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.470767706833!2d31.201623700000003!3d30.03582399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145847d9cdbfb8b9%3A0x257377c4647e1126!2z2LTYsdmD2Kkg2LHZitiq2KfZhCB8INmE2YTYrtiv2YXYp9iqINin2YTYqti52YTZitmF2YrYqQ!5e1!3m2!1sar!2seg!4v1775573317335!5m2!1sar!2seg"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
   </div>
 </section>
-
-
-
-      {/* AboutSection كامل */}
-      
-      {/* <ConsultationCTA /> */}
-      <ContactSection />
-      {/* <TeamSection /> */}
-      <TestimonialsSection />
-    
      <BlogSection /> 
-     
      
 
     </div>

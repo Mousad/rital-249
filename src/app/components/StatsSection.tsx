@@ -4,7 +4,7 @@ import { Users, Award, UserCheck, Building2 } from "lucide-react";
 const stats = [
   {
     icon: Users,
-    number: 5000,
+    number: 15000,
     suffix: "+",
     label: "القبول",
    

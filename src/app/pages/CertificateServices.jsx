@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import servImage from "../pilden/serv.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { Footer } from "../components/Footer";
+import { faWhatsapp, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import nobu  from "../pilden/nobu.png";
+
 
 const requirements = [
   { title: "اسم الطالب رباعي" },
@@ -52,32 +53,33 @@ const posts = [
 export default function CertificateServices() {
   return (
     <div className="min-h-screen bg-[#f2f9f5]">
+      
 
       {/* Hero */}
-      <div className="relative h-80 w-full">
-        <img
-          src="https://egyaid.mohesr.gov.eg/assets/img/%D9%85%D9%85%D9%8A%D8%B2%D8%A7%D8%AA.JPG"
-          alt="certificate"
-          className="w-full h-full object-cover"
-        />
+     <div className="relative h-60 w-[100%] ">
+  {/* <div className="absolute inset-0 h-80 bg-black/70"></div> */}
 
-        <div className="absolute inset-0 bg-black/50"></div>
+  <img
+    src={nobu}
+    alt="certificate"
+    className=" h-[450] object-cover"
+  />
 
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-          <h1 className="text-3xl md:text-2xl font-bold mb-4">
-             استخراج وتجهيز الشهادات
-          </h1>
 
-         
-        </div>
-      </div>
+  <div className="absolute inset-0 flex flex-col  items-center justify-center text-center text-white">
+    {/* <h1 className="text-3xl md:text-2xl font-bold mb-4">
+       استخراج وتجهيز الشهادات
+    </h1> */}
+  </div>
+</div>
+
 
       {/* تعريف ريتال */}
-      <section className="py-10 flex justify-center">
-        <div className="relative w-full max-w-6xl p-10 border-4 border-[#f2f9f5] rounded-t-[20px] flex flex-col md:flex-row items-center gap-10 bg-white shadow-lg">
+      <section className="py-6  flex justify-center ">
+        <div className="relative  w-full max-w-6xl p-10 border-4 border-[#f2f9f5] rounded-t-[20px] flex flex-col md:flex-row items-center gap-10 bg-[#f2f9f5] shadow-lg">
 
-          <div className="flex-1 text-center md:text-right">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="flex-1 text-center md:text-right bg-[#f2f9f5]">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 ">
               <span className="text-[#154734]">خدمات ريتال التعليمية</span>
             </h2>
 
@@ -87,14 +89,10 @@ export default function CertificateServices() {
               التعليمية بأسرع وقت ممكن.
             </p>
           </div>
-
-        </div>
-      </section>
-      <section className="container mx-auto px-4 py-4">
-  <div className="grid md:grid-cols-3 gap-10 items-center bg-[#f2f9f5] p-8 rounded-3xl shadow-lg">
+         <div className="grid md:grid-cols-3 gap-10 items-center bg-[#f2f9f5] p-8 rounded-3xl ">
 
     {/* المستشار التعليمي */}
-   <div className="bg-white shadow-lg rounded-2xl p-6 max-w-sm mx-auto transition-colors duration-500 hover:bg-[#e6f4f1]">
+   <div className="bg-[#f2f9f5]   p-6 max-w-sm mx-auto transition-colors duration-500 hover:bg-[#f2f9f5]">
   <div className="flex items-center gap-4 mb-4">
     <img
       src="https://rital-sd.com/lovable-uploads/a5c80a15-6935-45ec-8852-551e961cc11f.png"
@@ -106,7 +104,7 @@ export default function CertificateServices() {
     </h3>
   </div>
 
-  <p className="text-gray-600 leading-relaxed text-sm">
+  <p className="text-gray-600  text-sm">
     مستشار تعليمي متخصص في شؤون الطلاب الوافدين، يقدّم محتوى موثوقًا
     مستندًا إلى مصادر رسمية وخبرة ميدانية لمساعدة الطلاب في اختيار
     التخصص المناسب وإكمال إجراءاتهم الدراسية.
@@ -114,71 +112,64 @@ export default function CertificateServices() {
 </div>
 
     {/* صورة واتساب */}
-    <div className="flex justify-center">
-      <img
-        src="https://rital-sd.com/lovable-uploads/a5c80a15-6935-45ec-8852-551e961cc11f.png"
-        alt="WhatsApp"
-        className="w-64 rounded-2xl shadow-lg"
-      />
-    </div>
+    
 
     {/* مشاركة المقال */}
     <div className="text-center space-y-4">
 
       <h3 className="text-lg font-bold text-[#154734]">
-        شارك هذا المقال من خلال
+        تواصل معنا
       </h3>
 
       <div className="flex justify-center gap-4">
 
         <a
-          href="https://m.facebook.com/sharer.php"
+          href="https://www.facebook.com/Rital.office/directory_names?locale=ar_AR"
           target="_blank"
           className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white hover:scale-110 transition"
         >
-          f
+          <FontAwesomeIcon icon={faFacebook} />
         </a>
 
         <a
-          href="https://twitter.com/intent/tweet"
+          href="https://www.instagram.com/rital_office/"
           target="_blank"
-          className="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white hover:scale-110 transition"
+          className="w-12 h-12 flex items-center justify-center rounded-full bg-[#fb0062] text-white hover:scale-110 transition"
         >
-          X
+           <FontAwesomeIcon icon={faInstagram} />
         </a>
 
-        <a
-          href="https://www.linkedin.com"
-          target="_blank"
-          className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-700 text-white hover:scale-110 transition"
-        >
-          in
-        </a>
+       
 
-        <a
-          href="https://api.whatsapp.com/send"
-          target="_blank"
-          className="w-12 h-12 flex items-center justify-center rounded-full bg-green-500 text-white hover:scale-110 transition"
-        >
-          W
-        </a>
+       <a
+  href="https://api.whatsapp.com/send?phone=201117736999"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-12 h-12 flex items-center justify-center rounded-full bg-green-500 text-white hover:scale-110 transition-transform duration-200"
+>
+  <FontAwesomeIcon icon={faWhatsapp} />
+</a>
+
 
       </div>
 
     </div>
 
   </div>
-</section>
+        </div>
+        
+      </section>
+      
 
       {/* خدمات ريتال */}
-      <section className="container mx-auto px-4 py-8">
+      <section className="container mx-auto px-4 py-8 bg-[#f2f9f5]">
         <h2 className="text-3xl font-bold text-[#154734] text-center mb-10">
           خدمات تجهيز الشهادات
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
 
-          <div className="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition">
+          <div className="bg-white p-6 rounded-2xl  text-center hover:shadow-xl transition">
             <div className="text-4xl mb-4">📄</div>
             <h3 className="text-xl font-bold text-[#154734] mb-2">
               استخراج الشهادات الدراسية
@@ -323,12 +314,12 @@ export default function CertificateServices() {
         href="https://wa.me/+201117740555"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-5 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition"
+        className="fixed bottom-8  right-5 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition"
       >
         <FontAwesomeIcon icon={faWhatsapp} />
       </a>
 
-      <Footer />
+      
 
     </div>
   );

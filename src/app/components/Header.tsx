@@ -58,11 +58,16 @@ export function Header() {
 
           {/* Logo */}
           
-          <div className="flex items-center gap-3">
-            <a href="/" className="font-black text-xl" style={{ color: "#0d2b5e" }}>
-              Rital
-            </a>
-          </div>
+         <div className="flex items-center gap-3">
+  <a href="/" className="font-black text-xl" style={{ color: "#0d2b5e" }}>
+    <img
+      src="http://localhost:5173/src/app/pilden/rital.png"
+      alt="Rital"
+      className="h-16 w-auto object-contain"
+    />
+  </a>
+</div>
+
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-4">

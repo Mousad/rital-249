@@ -13,21 +13,21 @@ export function ConsultationCTA() {
   return (
     <section
       id="consultation"
-      className="py-20 px-4 relative overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #154734 0%, #154734 50%, #154734 100%)" }}
+      className="py-20 px-4 relative overflow-hidden bg-[#f2f9f5]"
+      
     >
       {/* Decorative Elements */}
       <div
         className="absolute top-0 left-0 w-80 h-80 rounded-full opacity-10"
-        style={{ background: "radial-gradient(circle, #ffffff, transparent)", transform: "translate(-30%, -30%)" }}
+        style={{ background: "radial-gradient(circle, #f1f8f4, transparent)", transform: "translate(-30%, -30%)" }}
       />
       <div
         className="absolute bottom-0 right-0 w-96 h-96 rounded-full opacity-10"
-        style={{ background: "radial-gradient(circle, #c0392b, transparent)", transform: "translate(30%, 30%)" }}
+        style={{ background: "radial-gradient(circle, #0d2b5e, transparent)", transform: "translate(30%, 30%)" }}
       />
       <div
         className="absolute top-1/2 left-1/3 w-64 h-64 rounded-full opacity-5"
-        style={{ background: "radial-gradient(circle, #ffffff, transparent)", transform: "translateY(-50%)" }}
+        style={{ background: "radial-gradient(circle, #0d2b5e, transparent)", transform: "translateY(-50%)" }}
       />
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -36,13 +36,13 @@ export function ConsultationCTA() {
           <div className="flex-1 text-right">
             
 
-            <h2 className="text-4xl lg:text-5xl font-black text-[white] mb-5 leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-black text-[#3e757a] mb-5 leading-tight">
               احجز استشارتك
               <br />
              
             </h2>
 
-            <p className="text-[white] text-lg leading-relaxed mb-8 max-w-lg">
+            <p className="text-[#0d2b5e] text-lg leading-relaxed mb-8 max-w-lg">
               تحدث مع أحد مستشارينا الأكاديميين المتخصصين واحصل على خارطة طريق واضحة
               لبدء مسيرتك التعليمية في أفضل الجامعات العالمية
             </p>
@@ -51,8 +51,8 @@ export function ConsultationCTA() {
             <div className="space-y-3 mb-10">
               {benefits.map((benefit, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <CheckCircle size={20} style={{ color: "white", flexShrink: 0 }} />
-                  <span className="text-blue-100">{benefit}</span>
+                  <CheckCircle size={20} style={{ color: "#3e757a", flexShrink: 0 }} />
+                  <span className="text-[#0d2b5e]">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -60,7 +60,7 @@ export function ConsultationCTA() {
             {/* Meta Info */}
             <div className="flex flex-wrap gap-6 mb-8">
               
-              <div className="flex items-center gap-2 text-blue-200">
+              <div className="flex items-center gap-2 text-[#3e757a]">
                 <Users size={18} />
                 <span className="text-sm">+262 استشارة ناجحة</span>
               </div>
@@ -73,9 +73,9 @@ export function ConsultationCTA() {
                 href="https://wa.me/905001234567"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105"
                 style={{
-                  backgroundColor: "rgba(255,255,255,0.1)",
+                  backgroundColor: "#3e757a",
                   color: "white",
-                  border: "2px solid rgba(255,255,255,0.3)",
+                  border: "2px solid #3e757a",
                 }}
               >
                           <FontAwesomeIcon icon={faWhatsapp} />
