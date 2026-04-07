@@ -1,14 +1,12 @@
 {
-  "name": "@figma/my-make-file",
+  "name": "rital-website",
   "private": true,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "vite preview",
-    "prevercel-build": "chmod +x node_modules/.bin/vite",
-    "vercel-build": "vite build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
@@ -85,6 +83,6 @@
     "react-dom": "18.3.1"
   },
   "engines": {
-    "node": "24.x"
+    "node": "20.x"
   }
 }
